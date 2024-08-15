@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUAP</title>
+    <style>
+        img {
+            width: 225px;
+            height: 225px;
+        }
+        ul {
+            list-style-type: none;
+            align-items: baseline;
+            gap: 5px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>SUAP</h1>
+   
+    <div>
+        <h2>Alunos Cadastrados:</h2>
+        <ul>
+            {% for aluno in alunos %}
+            <img src="{{aluno.imagem.url }}" alt="">
+            <li>{{aluno.nome}}</li> 
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
